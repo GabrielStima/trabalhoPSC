@@ -64,4 +64,11 @@ CREATE TABLE aluno_has_curso(
 ```
 4. Caso tenha que mudar o nome da DATABASE ou do SERVER NAME não se esqueça de alterar no arquivo `Database.java`;
 5. No arquivo `Database.java` mude as Strings `username` e `password`  com suas respectivas credenciais de entrado do banco de dados;
-6. Após isso configurado é só iniciar no arquivo `Escola.java` e utilizar o programa;
+6. Após isso configurado confira se no arquivo `Database.java` irá ter algum problema de importação da lib `java.sql` caso tenha:
+	6.1. [Clique aqui](https://dev.mysql.com/downloads/connector/j/), e baixe o conector J para configurar a biblioteca de conexão
+	6.2. Após baixar seja pelo MySql installer ou por zip;
+	6.3. Clique com o botão direito no projeto, vá na opção `Build Path` e clique em `Configure Build Path`;
+	6.4. Irá abri uma tela já na visão de `Java Build Path`, clique na aba `Libraries` e caso o conector não exista no Classpath, clique nesse item e nas opção que iram aparecer, clique em `Add External JARs`, e encontre o caminha para o `mysql-connector-java-8*.jar` selecione e clique em abrir;
+	6.5. Após isso clique em `Apply and Close`;
+	6.6. E por fim vá no arquivo `module-info.java` e escrava dentro do objeto `requires java.sql;`, com isso o erro da lib deve desaparecer;
+7. E é só iniciar no arquivo `Escola.java` e utilizar o programa;
